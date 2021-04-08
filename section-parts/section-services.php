@@ -65,7 +65,10 @@ if ( onepress_is_selective_refresh() ) {
 								$url = onepress_get_media_url( $settings['image'] );
 								if ( $url ) {
 									$img_alt = get_post_meta( $settings['image']['id'], '_wp_attachment_image_alt', true );
-									$media = '<div class="service-image icon-image"><img src="' . esc_url( $url ) . '" alt="' . esc_attr( $img_alt ) . '"></div>';
+									//#CUSTOM INCIO
+                                    // $media = '<div class="service-image icon-image"><img src="' . esc_url( $url ) . '" alt="' . esc_attr( $img_alt ) . '"></div>';
+									$media = '<div class="service-image icon-image"><img src="https://joicebertola.com.br/wp-content/uploads/2020/12/001-man.png" alt="' . esc_attr( $img_alt ) . '"></div>';
+									//#CUSTOM FIM
 								}
 							} elseif ( $settings['icon'] ) {
 								$settings['icon'] = trim( $settings['icon'] );
@@ -73,7 +76,21 @@ if ( onepress_is_selective_refresh() ) {
 								if ( $settings['icon'] != '' && strpos( $settings['icon'], 'fa' ) !== 0 ) {
 									$settings['icon'] = 'fa-' . $settings['icon'];
 								}
-								$media = '<div class="service-image"><i class="fa ' . esc_attr( $settings['icon'] ) . ' fa-' . esc_attr( $size ) . '"></i></div>';
+								//#CUSTOM INCIO
+                                // $media = '<div class="service-image"><i class="fa ' . esc_attr( $settings['icon'] ) . ' fa-' . esc_attr( $size ) . '"></i></div>';
+                                if($post_id == 1496){
+                                    $media = '<div class="service-image"><img class="img-section-service '.$post_id.'" src="https://joicebertola.com.br/wp-content/uploads/2020/12/027-children.png" alt="' . esc_attr( $img_alt ) . '"></div>';
+                                }
+                                if($post_id == 1499){
+                                    $media = '<div class="service-image"><img class="img-section-service '.$post_id.'" src="https://joicebertola.com.br/wp-content/uploads/2020/12/022-parents.png" alt="' . esc_attr( $img_alt ) . '"></div>';
+                                }
+                                if($post_id == 1506){
+                                    $media = '<div class="service-image"><img class="img-section-service '.$post_id.'" src="https://joicebertola.com.br/wp-content/uploads/2020/12/023-grandparents.png" alt="' . esc_attr( $img_alt ) . '"></div>';
+                                }
+                                if($post_id == 1503){
+                                    $media = '<div class="service-image"><img class="img-section-service '.$post_id.'" src="https://joicebertola.com.br/wp-content/uploads/2020/12/039-brain.png" alt="' . esc_attr( $img_alt ) . '"></div>';
+								}
+								//#CUSTOM FIM
 							}
 							if ( $layout == 12 ) {
 								$classes = 'col-sm-12 col-lg-' . $layout;

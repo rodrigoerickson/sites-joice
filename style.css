@@ -4852,3 +4852,30 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .has-very-dark-gray-background-color {
   background-color: #444;
 }
+
+/* CUSTOM */
+
+.feature-media{
+    display: flex;
+    justify-content: center;
+}
+.feature-media .fa-stack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feature-media img{
+    max-width: 63px;
+    position: absolute;
+}
+
+.img-section-service{
+    max-width: 70px !important;
+}
+
+@media (max-width: 990){
+    .feature-media img {
+        left: 15px;
+        top: 16px;
+    }
+}

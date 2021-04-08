@@ -47,7 +47,22 @@ if ( !$disable && !empty( $data ) ) {
                     }
                 } else if ( $f['icon'] ) {
                     $f['icon'] = trim( $f['icon'] );
-                    $media = '<span class="fa-stack fa-5x"><i class="fa fa-circle fa-stack-2x icon-background-default"></i> <i class="feature-icon fa '.esc_attr( $f['icon'] ).' fa-stack-1x"></i></span>';
+                    //#CUSTOM INCIO
+                    // $media = '<span class="fa-stack fa-5x"><i class="fa fa-circle fa-stack-2x icon-background-default"></i> <i class="feature-icon fa '.esc_attr( $f['icon'] ).' fa-stack-1x"></i></span>';
+                    
+                    if($k == 0){
+                        $media = '<span class="fa-stack fa-5x"><i class="fa fa-circle fa-stack-2x icon-background-default"></i> <img src="https://joicebertola.com.br/wp-content/uploads/2020/11/020-psychosis-branco.png"></span>';
+                    }
+                    if($k == 1){
+                        $media = '<span class="fa-stack fa-5x"><i class="fa fa-circle fa-stack-2x icon-background-default"></i> <img src="https://joicebertola.com.br/wp-content/uploads/2020/11/011-stress-branco.png"></span>';
+                    }
+                    if($k == 2){
+                        $media = '<span class="fa-stack fa-5x"><i class="fa fa-circle fa-stack-2x icon-background-default"></i> <img src="https://joicebertola.com.br/wp-content/uploads/2020/11/003-depression-branco.png"></span>';
+                    }
+                    if($k == 3){
+                        $media = '<span class="fa-stack fa-5x"><i class="fa fa-circle fa-stack-2x icon-background-default"></i> <img src="https://joicebertola.com.br/wp-content/uploads/2020/11/017-confusion-branco.png"></span>';
+                    }
+                    //#CUSTOM FIM
                 }
 
                 ?>
